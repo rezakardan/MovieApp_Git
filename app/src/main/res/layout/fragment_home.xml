@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fitsSystemWindows="true"
+    tools:context=".ui.home.HomeFragment">
+
+
+
+
+
+
+
+
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+
+
+        android:layout_marginTop="@dimen/_32mdp"
+        android:fillViewport="true"
+        android:paddingBottom="@dimen/_40mdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <LinearLayout
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/constAds"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <TextView
+        android:id="@+id/txt_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/myRoles"
+        android:textAppearance="@style/TextAppearance_Bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!--see all-->
+    <TextView
+        android:id="@+id/see_all_topRated"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_4mdp"
+        android:layout_marginEnd="@dimen/_12mdp"
+        android:text="@string/see_all"
+        android:textAppearance="@style/TextAppearance_Bold"
+        android:textColor="@color/Gold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_title" />
+
+    <!--banner-->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/banner_List"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_180mdp"
+        android:layout_marginTop="@dimen/_8mdp"
+        android:clipToPadding="false"
+        android:paddingHorizontal="@dimen/_18mdp"
+        app:layout_constraintTop_toBottomOf="@id/see_all_topRated"
+        tools:listitem="@layout/item_banner"
+        />
+
+    <!--popular-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_18mdp"
+        android:text="@string/popular"
+        android:textAppearance="@style/TextAppearance_Bold"
+        android:textColor="@color/Charcoal_Gray"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/see_all_pop" />
+
+    <!--see all-->
+    <TextView
+        android:id="@+id/see_all_pop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_4mdp"
+        android:layout_marginEnd="@dimen/_12mdp"
+        android:text="@string/see_all"
+        android:textAppearance="@style/TextAppearance_Bold"
+        android:textColor="@color/Gold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/banner_List" />
+    <!--popular-->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/popular_List"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_8mdp"
+        android:clipToPadding="false"
+        android:paddingHorizontal="@dimen/_18mdp"
+        app:layout_constraintTop_toBottomOf="@id/see_all_pop"
+        />
+    <!--tv-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_18mdp"
+        android:text="@string/tv"
+        android:textAppearance="@style/TextAppearance_Bold"
+        android:textColor="@color/Charcoal_Gray"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/see_all_tv" />
+
+    <!--see all-->
+    <TextView
+        android:id="@+id/see_all_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_4mdp"
+        android:layout_marginEnd="@dimen/_12mdp"
+        android:text="@string/see_all"
+        android:textAppearance="@style/TextAppearance_Bold"
+        android:textColor="@color/Gold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/popular_List" />
+    <!--popular-->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/tv_List"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_8mdp"
+        android:clipToPadding="false"
+        android:paddingHorizontal="@dimen/_18mdp"
+        app:layout_constraintTop_toBottomOf="@id/see_all_tv"
+        />
+    <!--on the air-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_18mdp"
+        android:text="@string/tv_on_the_air"
+        android:textAppearance="@style/TextAppearance_Bold"
+        android:textColor="@color/Charcoal_Gray"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/see_all_air" />
+
+    <!--see all-->
+    <TextView
+        android:id="@+id/see_all_air"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_4mdp"
+        android:layout_marginEnd="@dimen/_12mdp"
+        android:text="@string/see_all"
+        android:textAppearance="@style/TextAppearance_Bold"
+        android:textColor="@color/Gold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_List" />
+    <!--air-->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/tv_air_List"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_8mdp"
+        android:clipToPadding="false"
+        android:paddingHorizontal="@dimen/_18mdp"
+        app:layout_constraintTop_toBottomOf="@id/see_all_air"
+       />
+    <!--UpComing-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_18mdp"
+        android:text="@string/upcoming"
+        android:textAppearance="@style/TextAppearance_Bold"
+        android:textColor="@color/Charcoal_Gray"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/see_all_upcoming" />
+
+    <!--see all-->
+    <TextView
+        android:id="@+id/see_all_upcoming"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_4mdp"
+        android:layout_marginEnd="@dimen/_12mdp"
+        android:text="@string/see_all"
+        android:textAppearance="@style/TextAppearance_Bold"
+        android:textColor="@color/Gold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_air_List" />
+    <!--UpComing-->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/UpComing_List"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_8mdp"
+        android:clipToPadding="false"
+        android:paddingHorizontal="@dimen/_18mdp"
+        app:layout_constraintTop_toBottomOf="@id/see_all_upcoming"
+        />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </LinearLayout>
+
+
+
+    </androidx.core.widget.NestedScrollView>
+
+
+
+
+
+
+<ProgressBar
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintBottom_toBottomOf="parent"
+    android:id="@+id/loading"/>
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
